@@ -1,7 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Welcome from "./components/Welcome";
-import Quiz from "./components/Quiz";
-import Result from "./components/Result";
+import Welcome from "./components/welcome";
+import Quiz from "./components/quiz";
+import Result from "./components/result";
 import HomeButton from "./components/home-button";
 
 export default function App() {
