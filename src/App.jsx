@@ -9,17 +9,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
-
-
-
-
-
       <div className="w-full max-w-3xl">
         <HomeButton />
         <div className="bg-gray-800/80 rounded-2xl shadow-2xl p-16 mt-4">
         <Routes>
           <Route path="/" element={<Welcome onStart={() => navigate("/quiz")} />} />
-          <Route path="/quiz" element={<Quiz onFinish={(score) => navigate(`/result?score=${score}`)} />} />
+          {/* envia o array de resultados via state para a rota /result */}
+          <Route path="/quiz" element={<Quiz onFinish={(results) => navigate("/result", { state: { results } })} />} />
           <Route path="/result" element={<Result />} />
         </Routes>
         </div>
